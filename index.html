@@ -1,23 +1,63 @@
 <html>
+
+<!--
+
+ █████╗ ███████╗ ██████╗██╗██╗    ██╗███████╗    ████████╗██╗  ██╗███████╗    
+██╔══██╗██╔════╝██╔════╝██║██║    ██║██╔════╝    ╚══██╔══╝██║  ██║██╔════╝    
+███████║███████╗██║     ██║██║    ██║███████╗       ██║   ███████║█████╗      
+██╔══██║╚════██║██║     ██║██║    ██║╚════██║       ██║   ██╔══██║██╔══╝      
+██║  ██║███████║╚██████╗██║██║    ██║███████║       ██║   ██║  ██║███████╗    
+╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝╚═╝    ╚═╝╚══════╝       ╚═╝   ╚═╝  ╚═╝╚══════╝    
+                                                                              
+
+██████╗ ██████╗  ██████╗  ██████╗ ██████╗  █████╗ ███╗   ███╗███╗   ███╗ █████╗ ██████╗ ██╗     ███████╗
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗████╗ ████║████╗ ████║██╔══██╗██╔══██╗██║     ██╔════╝
+██████╔╝██████╔╝██║   ██║██║  ███╗██████╔╝███████║██╔████╔██║██╔████╔██║███████║██████╔╝██║     █████╗  
+██╔═══╝ ██╔══██╗██║   ██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║██║╚██╔╝██║██╔══██║██╔══██╗██║     ██╔══╝  
+██║     ██║  ██║╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║██║ ╚═╝ ██║██║  ██║██████╔╝███████╗███████╗
+╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝
+                                                                                                        
+
+███████╗ █████╗ ███╗   ███╗██╗███████╗██████╗  █████╗ ████████╗
+██╔════╝██╔══██╗████╗ ████║██║╚══███╔╝██╔══██╗██╔══██╗╚══██╔══╝
+███████╗███████║██╔████╔██║██║  ███╔╝ ██║  ██║███████║   ██║   
+╚════██║██╔══██║██║╚██╔╝██║██║ ███╔╝  ██║  ██║██╔══██║   ██║   
+███████║██║  ██║██║ ╚═╝ ██║██║███████╗██████╔╝██║  ██║   ██║   
+╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   
+                                                               
+
+-->
+
   <head>
+    <title> Cypher Key Story </title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico"/>
     <style>
       html {
         background: #000;
       }
+      @font-face {
+      font-family: "New York";
+      src: url("./NewYork.otf");
+    }
+    @font-face {
+      font-family: "LEMON MILK";
+      src: url("./LEMONMILK-Regular.otf");
+    }
       body {
         font-size: 100%;
-        font-family: "PT Sans", sans-serif;
+        font-family: "New York";
+        -webkit-text-stroke-width: 0.4px;
         line-height: 1.5;
-        background: #000;
-        color: rgba(255, 255, 255, 0.7);
+        background: black;
+        color: white;
       }
       body h1,
       body h2,
       body h3,
       body h4,
       body h5 {
-        color: #fff;
-        font-family: "Lora";
+        color: #4E4AFF;
+        font-family: "New York";
       }
       body h1 {
         font-size: 90px;
@@ -48,7 +88,7 @@
         line-height: 1.5;
       }
       .container {
-        width: 100%;
+        width: 80%;
         padding-top: 130px;
         margin-left: auto;
         margin-right: auto;
@@ -69,6 +109,7 @@
       }
       .fade {
         transition: all 0.6s;
+        padding-bottom: 100px;
       }
       .fade.out {
         opacity: 0;
@@ -82,101 +123,375 @@
       }
       .flowcontent {
         position: relative;
+        width: 50%;
       }
       .flowcontent:before {
         display: table;
         content: "";
         width: 1px;
-        height: 1200px;
       }
 
-.imgabandon {
-    position: absolute;
-width: 861px;
-height: 517px;
-left: 235px;
-top: 1070px;
-padding-bottom: 100px;
+      .fade-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 4vw;
+      }
+
+      .fade-item {
+        margin-bottom: 5rem;
+        width: 80%;
+      }
+
+      .fade-item img {
+        width: 70%;
+      }
+
+      .fade-item.right {
+        align-self: flex-end;
+        text-align:end;
+      }
+
+      .btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  height: 19px;
+  cursor: pointer;
+  display: inline-block;
+  background: #4E4AFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align:end;
+  text-decoration: none;
 }
 
-.text1 {
-    position: absolute;
-width: 861px;
-height: 517px;
-left: 235px;
-top: 700px;
+.btn2 {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  height: 19px;
+  cursor: pointer;
+  display: inline-block;
+  background: #4E4AFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  margin-left: auto;
+
 }
 
-.para1 {
-    position: absolute;
-width: 861px;
-height: 517px;
-left: 235px;
-top: 760px;
+.text {
+        font-family: LEMON MILK;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFEF62;
+        text-decoration: none;
+    }
+
+.btn:hover {background: rgba(78, 74, 255, 0.67); text-decoration: none;}
+.btn2:hover {background: rgba(78, 74, 255, 0.67); text-decoration: none;}
+
+.footer {
+  background: #4E4AFF;
+  position: relative;
 }
 
-.text2 {
-    width: 861px;
-    text-align: right;
+.footer a {
+  color: #ffffff;
 }
 
-.imgreturn {
-    position: absolute;
-width: 861px;
-height: 517px;
+.footer a:hover {
+  color: white;
 }
 
-.para2{
-width: 861px;
-text-align: right;
+.footerWrapper {
+  color: white;
+  background: #4E4AFF;
+  margin: auto;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  width:100%
 }
-      .flowcontent .caption {
-        position: absolute;
-        border-radius: 3px;
-        padding: 20px;
-        display: block;
-        top: 50%;
-        left: 10%;
-        z-index: 1;
-        transform: translateY(-50%);
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      }
-      .flowcontent .caption.right {
-        left: auto;
-        right: 10%;
-      }
-      .flowcontent .imageholder {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 0;
-      }
-      .flowcontent .imageholder.img1 {
-        background-image: url("https://dl.dropboxusercontent.com/u/8254962/rihanna-smoke.gif");
-      }
-      .flowcontent .imageholder.img2 {
-        background-image: url("https://dl.dropboxusercontent.com/u/8254962/pexels-photo-234078%401600px.jpeg");
-      }
-      .flowcontent video {
-        position: fixed;
-        min-height: 100%;
-        min-width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        z-index: 0;
-      }
+
+.footerWrapper .centerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-left: 34px;
+  padding-right: 34px;
+}
+
+.footerWrapper .description {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'lemon_milkregular';
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+}
+
+.footerWrapper .imageLogo {
+  height: 80px;
+  margin: auto;
+}
+
+.footerWrapper .logo_big {
+  height: 200px;
+  margin-left: 5px;
+}
+
+.footerWrapper .dFlex {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footerWrapper .iconsLine {
+  justify-content:left;
+}
+
+.footerWrapper .iconsLine img {
+  margin-right: 12px;
+}
+
+.footerWrapper .mediumIcon {
+  margin-left: 10px;
+}
+.footerWrapper .tiktokIcon {
+  margin-right: 20px;
+}
+.footerWrapper .twitchIcon {
+  margin-right: 20px;
+}
+.footerWrapper .discordIcon {
+  margin-right: 20px;
+}
+
+.footerWrapper .mirrorIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.footerWrapper .youtubeIcon {
+  width: 30px;
+  height: 25px;
+}
+
+.footerWrapper .gitbookIcon {
+  width: 33px;
+  height: 33px;
+}
+
+.whiteLogo {
+  width: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+  
+.footerWrapper .linkedinIcon {
+  width: 35px;
+}
+
+a.footer-text-white {
+  color: white;
+}
+  
+@media (max-width: 1440px) {
+  .footerWrapper {
+    max-width: 90%;
+  }
+}
+@media (max-width: 780px) {
+  .footerWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerWrapper .description {
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+  }
+  
+  .footerWrapper .iconsLine img {
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  .footerWrapper .mediumIcon {
+    height: 25px;
+    margin-left: 5px;
+  }
+
+  .footerWrapper .youtubeIcon{
+    width: 30px;
+    height: 25px;
+  }
+
+  .footerWrapper .mirrorIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footerWrapper .gitbookIcon {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footerWrapper .centerWrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footerWrapper .description {
+    font-size: 22px;
+    line-height: 25px;
+    text-align: center;
+  }
+
+
+
+   
+  .footerWrapper .iconsLine {
+    justify-content: center;
+  }
+
+  .footerWrapper .iconsLine img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .footerWrapper .mediumIcon {
+    height: 20px;
+  }
+  .footerWrapper .tiktokIcon {
+    margin-right: 5px;
+  }
+
+  .footerWrapper .twitchIcon {
+    margin-right: 5px;
+  }
+
+  .footerWrapper .discordIcon {
+    margin-right: 10px;
+  } 
+
+  .footerWrapper .mirrorIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footerWrapper .youtubeIcon {
+    width: 30px;
+    height: 25px;
+  }
+
+  .footerWrapper .gitbookIcon {
+    width: 33px;
+    height: 33px;
+  }
+}
+ 
+  
+    @media (max-width: 420px) {
+  
+      
+    }
+
+@media (max-width: 780px) {
+  .footerWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerWrapper .textLogo {
+    text-align: center;
+  }
+
+  .footerWrapper .imageLogo {
+    height: 30px;
+    margin: auto;
+  }
+
+  .footerWrapper .logo_big {
+    height: 15px;
+    margin-left: 5px;
+  }
+
+  .footerWrapper .description {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .footerWrapper .iconsLine {
+    justify-content: center;
+  }
+
+  .footerWrapper .iconsLine img {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .footerWrapper .mediumIcon {
+    height: 10px;
+  }
+  .footerWrapper .tiktokIcon {
+    margin-right: 5px;
+  }
+
+  .footerWrapper .twitchIcon {
+    margin-right: 5px;
+  }
+
+  .footerWrapper .discordIcon {
+    margin-right: 10px;
+  } 
+
+  .footerWrapper .mirrorIcon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .footerWrapper .youtubeIcon {
+    width: 10px;
+    height: 10px;
+  }
+
+  .footerWrapper .gitbookIcon {
+    width: 15px;
+    height: 15px;
+  }
+
+}
+
+
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="./aos.js"></script> 
+    <link rel="stylesheet" href="./aos.css" />
   </head>
   <body>
-    <div class="container out">
+    <div class="container">
       <h1>Search for the Cypher Keys</h1>
       <p class="fade">
         The interwoven Interstitial NFTs and Cypher Key Daily Auction NFTs are threaded 
@@ -184,47 +499,74 @@ text-align: right;
         artworks are made by a mix of in-house handicraft and AI generative models (at the 
         moment using DDPMs). 
       </p>
-          <div style="padding: 50px" class="flowcontent flow"></div>
-          <div class="caption">
-            <h4 class="text1">The Abandoned Textile Factory</h4>
-              <img class="imgabandon" src='https://digitalax.mypinata.cloud/ipfs/QmaMUZL31CmmR6CgKLVrnWaGWQ4zffk3GNippdPVYGhaqv'></img>
-              <p class="para1">Our story begins with magical text that emerged into a vivid scene of an abandoned textile factory. The Cyphernaut attendants left in a rush, filled with fear their encryption methods were about to be broken. <br></br> With fabrics left hanging that skirt the limits of concealment, you have a choice— meet the reserve and begin to crack the code or wonder what you've missed until someone else beats you to it. It's only a matter of time until the workshop is found. Take what you can, some materials are more valuable than others.</p>
+      <div class="fade-wrapper">
+      <div class="fade-item" data-aos="fade-up">
+        <div class="caption">
+          <h4 class="text1">The Abandoned Textile Factory</h4>
+          <p class="para1">Our story begins with magical text that emerged into a vivid scene of an abandoned textile factory. The Cyphernaut attendants left in a rush, filled with fear their encryption methods were about to be broken. <br></br> With fabrics left hanging that skirt the limits of concealment, you have a choice— meet the reserve and begin to crack the code or wonder what you've missed until someone else beats you to it. It's only a matter of time until the workshop is found. Take what you can, some materials are more valuable than others.</p>
+          <img  class="imgreturn" src='https://digitalax.mypinata.cloud/ipfs/QmaMUZL31CmmR6CgKLVrnWaGWQ4zffk3GNippdPVYGhaqv'></img>
+         <a href="https://auctions.f3manifesto.xyz/f3m/1" target= "_blank" rel="noreferrer" style="text-decoration: none"><button class="btn text">Collect</button></a> 
         </div>
-
       </div>
-      <div class="flowcontent flow">
-        <div class="imageholder img2"></div>
-        <div class="caption right">
-          <h4 class="text2">The Return</h4>
-          <p class="para2">A returner’s journey would show a vibrant cacophony of bustling life, active markets and scholars of arcane studies. It’s hard to believe how different it has all become. With this power to replay decisive moments along branching paths, it’s time to decide once again. <br> </br> Follow the signs uncovered by the diffusion and make your way towards the Cyphernaut’s underground library. Will you meet the navigator’s there? Only time will tell.</p>
-
+      <div class="fade-item right" data-aos="fade-up">
+        <div class="caption">
+          <h4 class="text1">The Return</h4>
+          <p class="para1">A returner’s journey would show a vibrant cacophony of bustling life, active markets and scholars of arcane studies. It’s hard to believe how different it has all become. With this power to replay decisive moments along branching paths, it’s time to decide once again. <br> </br> Follow the signs uncovered by the diffusion and make your way towards the Cyphernaut’s underground library. Will you meet the navigator’s there? Only time will tell.</p>
           <img class="imgreturn" src='https://f3manifesto.mypinata.cloud/ipfs/QmUft52dfQVpZRPQ24bSuKb42n9ME8w6H9DAa15EQt7m2E'></img>
         </div>
       </div>
-      <span></span>
-      <h2 class="fade" style="padding-left: 100px; padding-top: 300px;">Cyphernaut Library</h2>
-      <p class="fade" style="padding-left: 100px; width: 800px;">
-        With an edge of unworldly otherness, the library reveals the next set 
-        of keys. Cyphernauts hone their discipline with zealous intent, fabricating 
-        rune after cypher after codex. Most of these spells require verbal, somatic 
-        or material components. Magic is not a matter of strength but of balance. Too 
-        little and you can’t do anything, too much and you lose your agency. Snapping 
-        forward as the glimpse of return unravels.
-      </p>
-      <img class="imgreturn" src='https://f3manifesto.mypinata.cloud/ipfs/QmQwFUdAv9zkhRnyn6yxc3siVsxeB8fLvsctLr7LtNVize' style="padding-left: 100px"></img>
-
-   <span></span>
-   <div class="flowcontent flow">
-    <div class="imageholder img2"></div>
-    <div class="caption right">
-      <h4>The Return</h4>
-      <p>A returner’s journey would show a vibrant cacophony of bustling life, active markets and scholars of arcane studies. It’s hard to believe how different it has all become. With this power to replay decisive moments along branching paths, it’s time to decide once again. <br> </br> Follow the signs uncovered by the diffusion and make your way towards the Cyphernaut’s underground library. Will you meet the navigator’s there? Only time will tell.</p>
-
-      <img src='https://f3manifesto.mypinata.cloud/ipfs/QmUft52dfQVpZRPQ24bSuKb42n9ME8w6H9DAa15EQt7m2E'></img>
+      <div class="fade-item" data-aos="fade-up">
+        <div class="caption">
+          <h4 class="text1">Cyphernaut Library</h4>
+          <p class="para1">
+            With an edge of unworldly otherness, the library reveals the next set 
+            of keys. Cyphernauts hone their discipline with zealous intent, fabricating 
+            rune after cypher after codex. Most of these spells require verbal, somatic 
+            or material components. Magic is not a matter of strength but of balance. Too 
+            little and you can’t do anything, too much and you lose your agency. Snapping 
+            forward as the glimpse of return unravels.
+          </p>
+          <img class="imgreturn" src='https://f3manifesto.mypinata.cloud/ipfs/QmQwFUdAv9zkhRnyn6yxc3siVsxeB8fLvsctLr7LtNVize'></img>
+        </div>
+      </div>
+      <div class="fade-item right" data-aos="fade-up">
+        <div class="caption">
+          <h4 class="text1">Celestian Orb</h4>
+          <p class="para1">Like the factory before it, the library is now unrecognisable. The Celestian Orb is the only device with a flickering superimposition between hope and decay. A Cyphernaut lays splayed alongside it. A lone survivor amidst the devastation. Unimaginable works of precious value lost. <br></br>Do you remember the instructions from reflected world lines? You’ll need them to not be consumed by the Orb’s desires.</p>
+          <img class="imgreturn" src='https://f3manifesto.mypinata.cloud/ipfs/QmSStBnLCDqKJNYfwtFC262DYpFuB3m8K4tev3YKABbFxq'></img>
+          <a href="https://auctions.f3manifesto.xyz/f3m/2" target= "_blank" rel="noreferrer" style="text-decoration: none"><button class="btn2 text">Collect</button></a> 
+        </div>
+        </div>
+        <div class="fade-item" data-aos="fade-up">
+          <div class="caption">
+            <h4 class="text1">Elemental Shift</h4>
+            <p class="para1">
+              The language of the elements has been abandoned. Whatever magic that could have been had is taken. The room shifts in hue as another Orb catches light— a change salient enough to wake the otherwise senseless Cyphernaut. <br></br>'They say that a Wizard's Hat is a map of their life'— it's all that you can make out from his almost unintelligible verbal delirium. And just as quickly as he woke, the Cyphernaut descends back into a cold unconscious state— this time with far less hope for revival.<br></br>You can do your best to forget about how this world is dying. Or, find your way to the Wizard's Room through the maze of galleries that await. How do you respond?
+            </p>
+            <img class="imgreturn" src='https://f3manifesto.mypinata.cloud/ipfs/QmcmA7bTauMD6r1gYmUvm4DGvZkY3MeptazoFSwBfAUeWQ'></img>
+          </div>
+        </div>
+        <div class="fade-item" data-aos="fade-up">
+          <div class="caption">
+            <h4 class="text1">A Maze of Galleries</h4>
+            <p class="para1">
+              Within the catacombs, this labyrinth of tunnels and galleries weaves its way edge to edge deep beneath the city, far from the the sight of the dazzling night sky.<br></br>
+              Turn after turn you make your way through narrow halls decorated by faint remnants of tattered tapestries. If you could make out the scenes, what insights might save you from what’s to come?<br></br>
+              A glowing door at the far end of the corridor beckons ahead. Is this the way to the den, then? There’s only one way to find out.
+            </p>
+            <img class="imgreturn" src='https://f3manifesto.mypinata.cloud/ipfs/QmaWKmN4i9jffz24iCZuMjxgaavzWHJeb8u4YWUCFcdFss'></img>
+          </div>
+        </div>
+        <div class="fade-item right" data-aos="fade-up">
+          <div class="caption">
+            <h4 class="text1">The Wizard's Hat</h4>
+            <p class="para1">'Thou shalt not use thine own power to control another.' A truth widely known in the depths of the catacombs where English is not a common tongue. <br></br> Magicians come hoping to tap into supernatural strength, whilst visitors only sometimes come to gaze. In a place filled with anything that you can imagine that you shouldn't have— a space that trades in risk and rarity. The Wizard sits tall in the centre of the room as the echo of his astral projection swirls around him. <br></br>Catch the hat before they return. Are you coming or going?</p>
+            <img class="imgreturn" src='https://f3manifesto.mypinata.cloud/ipfs/QmUX1oEwkrsZSYBNvwNwzL1st6Yv6S2XKXvYNJNVBC9t2R'></img>
+            <a href="https://auctions.f3manifesto.xyz/f3m/3" target= "_blank" rel="noreferrer" style="text-decoration: none"><button class="btn2 text">Collect</button></a> 
+          </div>
+        </div>
     </div>
-  </div>
-
-    </div>
+    
   </body>
   <script lang="javascript">
     /*//////////////////////
@@ -233,41 +575,103 @@ text-align: right;
      *
      */ /////////////////////
     // init controller
+    AOS.init();
     var controller = new ScrollMagic.Controller();
 
-    //flow
-    $(".flow").each(function () {
-      $(this).addClass("out");
-      new ScrollMagic.Scene({
-        triggerElement: this,
-        triggerHook: 0,
-        duration: 600,
-      })
-        .on("enter", function (ev) {
-          $(ev.target.triggerElement()).removeClass("out");
-        })
-        .on("leave", function (ev) {
-          $(ev.target.triggerElement()).addClass("out");
-        })
-        .addTo(controller);
-    });
+    // //flow
+    // $(".flow").each(function () {
+    //   $(this).addClass("out");
+    //   new ScrollMagic.Scene({
+    //     triggerElement: this,
+    //     triggerHook: 0,
+    //     duration: 600,
+    //   })
+    //     .on("enter", function (ev) {
+    //       $(ev.target.triggerElement()).removeClass("out");
+    //     })
+    //     .on("leave", function (ev) {
+    //       $(ev.target.triggerElement()).addClass("out");
+    //     })
+    //     .addTo(controller);
+    // });
 
-    //fade
-    $(".fade").each(function () {
-      $(this).addClass("out");
-      new ScrollMagic.Scene({
-        triggerElement: this,
-        triggerHook: 0.65,
-      })
-        .on("enter", function (ev) {
-          $(ev.target.triggerElement()).removeClass("out");
-        })
-        .on("leave", function (ev) {
-          $(ev.target.triggerElement()).addClass("out");
-        })
-        .addTo(controller);
-    });
+    // //fade
+    // $(".fade").each(function () {
+    //   $(this).addClass("out");
+    //   new ScrollMagic.Scene({
+    //     triggerElement: this,
+    //     triggerHook: 0.65,
+    //   })
+    //     .on("enter", function (ev) {
+    //       $(ev.target.triggerElement()).removeClass("out");
+    //     })
+    //     .on("leave", function (ev) {
+    //       $(ev.target.triggerElement()).addClass("out");
+    //     })
+    //     .addTo(controller);
+    // });
 
-    $(".container").removeClass("out");
+    // $(".container").removeClass("out");
+    
   </script>
+<footer>
+  <div class=footerWrapper style="width:100%">
+    <div class=textLogo>
+      <img class=imageLogo src='./footer-icons/logoBig.png' alt='logo_big' />
+    </div>
+    
+    <div class=centerWrapper>
+      <div class=description>
+        Reach out across any of our social media channels to get more involved with the manifesto, cc0 web3 fashion & the open metaverse. ALL ENGINEERING AND ARCHITECTURE IS FORKED FROM THE DIGITALAX OPEN SOURCE PROTOCOL STACK.
+      </div>
+
+      <div class="iconsLine" style="padding:20px">
+        <a href="https://www.tiktok.com/@f3manifesto" target="_blank" rel="noreferrer">
+          <img
+            src="./footer-icons/tiktok-icon.png"
+            alt="tiktok-icon"
+            class="tiktokIcon"
+          />
+        </a>
+        <a href="https://www.youtube.com/channel/UC5SOYiDrdooqNusoS5vrJAw" target="_blank" rel="noreferrer">
+          <img
+            src="./footer-icons/youtube-icon.png"
+            alt="youtube-icon"
+            class="youtubeIcon"
+          />
+        </a>
+        <a href="https://f3manifesto.medium.com/" target="_blank" rel="noreferrer">
+          <img
+            src="./footer-icons/medium-icon.png"
+            alt="medium-icon"
+            class="mediumIcon"
+          />
+        </a>
+        <a href="https://mirror.xyz/f3manifesto.eth" target="_blank" rel="noreferrer">
+          <img
+            src="./footer-icons/mirror.png"
+            alt="mirror-icon"
+            classe="mirrorIcon"
+          />
+        </a>
+        <a href="https://twitter.com/f3manifesto" target="_blank" rel="noreferrer">
+          <img
+            src="./footer-icons/twitter-icon.png"
+            alt="twitter-icon"
+            class="twitterIcon"
+          /> 
+        </a>
+        <a href="https://docs.f3manifesto.xyz/" target="_blank" rel="noreferrer">
+          <img
+            src="./footer-icons/gitbook.png"
+            alt="gitbook-icon"
+            class="gitbookIcon"
+          /> 
+        </a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
 </html>
