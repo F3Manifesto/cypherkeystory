@@ -88,7 +88,7 @@
         line-height: 1.5;
       }
       .container {
-        width: 80%;
+        width: 100%;
         padding-top: 130px;
         margin-left: auto;
         margin-right: auto;
@@ -102,7 +102,7 @@
       .container > p {
         position: relative;
         z-index: 2;
-        width: 80%;
+        width: 100%;
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
@@ -135,6 +135,8 @@
         display: flex;
         flex-direction: column;
         padding: 4vw;
+        width: 80%;
+        align-items: center;
       }
 
       .fade-item {
@@ -219,7 +221,7 @@
   background: #4E4AFF;
   margin: auto;
   padding-top: 27px;
-  padding-bottom: 27px;
+  padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
@@ -230,7 +232,7 @@
 .footerWrapper .centerWrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 
   padding-left: 34px;
   padding-right: 34px;
@@ -256,18 +258,18 @@
   height: 200px;
   margin-left: 5px;
 }
-
-.footerWrapper .dFlex {
-  display: flex;
-  margin-top: 10px;
-}
-
 .footerWrapper .iconsLine {
-  justify-content:left;
+  display: inherit;
+  margin-top: 10px;
+  align-items: center;
+  justify-content:center;
 }
 
 .footerWrapper .iconsLine img {
   margin-right: 12px;
+  margin-left: 12px;
+  align-items: center;
+  justify-content:baseline;
 }
 
 .footerWrapper .mediumIcon {
@@ -284,8 +286,8 @@
 }
 
 .footerWrapper .mirrorIcon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .footerWrapper .youtubeIcon {
@@ -346,8 +348,8 @@ a.footer-text-white {
   }
 
   .footerWrapper .mirrorIcon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .footerWrapper .gitbookIcon {
@@ -377,7 +379,7 @@ a.footer-text-white {
 
   .footerWrapper .iconsLine img {
     height: 20px;
-    width: 20px;
+ /*   width: 20px;*/
     margin-right: 5px;
   }
 
@@ -397,8 +399,8 @@ a.footer-text-white {
   } 
 
   .footerWrapper .mirrorIcon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .footerWrapper .youtubeIcon {
@@ -625,12 +627,13 @@ a.footer-text-white {
         Reach out across any of our social media channels to get more involved with the manifesto, cc0 web3 fashion & the open metaverse. ALL ENGINEERING AND ARCHITECTURE IS FORKED FROM THE DIGITALAX OPEN SOURCE PROTOCOL STACK.
       </div>
 
-      <div class="iconsLine" style="padding:20px">
+      <div class={[dflex,iconsLine]} style="padding-top:15px; padding-bottom: 20px; align-items: center; justify-content: left; display: flex;">
         <a href="https://www.tiktok.com/@f3manifesto" target="_blank" rel="noreferrer">
           <img
             src="./footer-icons/tiktok-icon.png"
             alt="tiktok-icon"
             class="tiktokIcon"
+            style="width: 28px; height:28px; margin-left: 5px; margin-right: 5px;"
           />
         </a>
         <a href="https://www.youtube.com/channel/UC5SOYiDrdooqNusoS5vrJAw" target="_blank" rel="noreferrer">
@@ -638,6 +641,7 @@ a.footer-text-white {
             src="./footer-icons/youtube-icon.png"
             alt="youtube-icon"
             class="youtubeIcon"
+            style="width: 30px; height:20px; margin-left: 5px; margin-right: 5px;"
           />
         </a>
         <a href="https://f3manifesto.medium.com/" target="_blank" rel="noreferrer">
@@ -645,6 +649,7 @@ a.footer-text-white {
             src="./footer-icons/medium-icon.png"
             alt="medium-icon"
             class="mediumIcon"
+            style="width: 30px; height:30px; margin-left: 5px; margin-right: 5px;"
           />
         </a>
         <a href="https://mirror.xyz/f3manifesto.eth" target="_blank" rel="noreferrer">
@@ -652,6 +657,7 @@ a.footer-text-white {
             src="./footer-icons/mirror.png"
             alt="mirror-icon"
             classe="mirrorIcon"
+            style="width: 30px; height:30px; margin-left: 5px; margin-right: 5px;"
           />
         </a>
         <a href="https://twitter.com/f3manifesto" target="_blank" rel="noreferrer">
@@ -659,6 +665,7 @@ a.footer-text-white {
             src="./footer-icons/twitter-icon.png"
             alt="twitter-icon"
             class="twitterIcon"
+            style="width: 30px; height:30px; margin-left: 5px; margin-right: 5px;"
           /> 
         </a>
         <a href="https://docs.f3manifesto.xyz/" target="_blank" rel="noreferrer">
@@ -666,6 +673,7 @@ a.footer-text-white {
             src="./footer-icons/gitbook.png"
             alt="gitbook-icon"
             class="gitbookIcon"
+            style="width: 30px; height:30px; margin-left: 5px; margin-right: 5px"
           /> 
         </a>
       </div>
